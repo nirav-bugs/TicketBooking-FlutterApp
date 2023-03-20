@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:ticket_booking/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,21 +8,29 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: Styles.bgcolor,
       body: ListView(
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
+                const Gap(40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text("Good morning"),
-                        Text("Book Tickets"),
+                      children: [
+                        Text(
+                          "Good morning",
+                          style: Styles.headlinestyle3,
+                        ),
+                        const Gap(5),
+                        Text(
+                          "Book Tickets",
+                          style: Styles.headlinestyle,
+                        ),
                       ],
                     ),
                     Container(

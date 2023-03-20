@@ -1,6 +1,5 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-
 import 'homeScreen.dart';
 
 class BottomBar extends StatefulWidget {
