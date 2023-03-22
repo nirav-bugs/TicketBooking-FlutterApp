@@ -1,15 +1,17 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'homeScreen.dart';
+import 'home_screen.dart.';
 
 class BottomBar extends StatefulWidget {
-  @override
   static final List<Widget> _widgetoptions = <Widget>[
     const HomeScreen(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile"),
   ];
+
+  const BottomBar({super.key});
+  @override
   State<BottomBar> createState() => _BottomBarState();
 }
 
@@ -58,6 +60,7 @@ class _BottomBarState extends State<BottomBar> {
                 activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
                 label: "Profile"),
           ]),
+      // HomeScreen()
     );
   }
 }

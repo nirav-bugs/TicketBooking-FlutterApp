@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         //  primarySwatch: Colors.red,
         primaryColor: primary,
       ),
-      home: BottomBar(),
+      home: const BottomBar(),
     );
   }
 }
