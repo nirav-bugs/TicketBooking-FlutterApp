@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_booking/screens/bottom_bar.dart';
-
-import 'app_styles.dart';
+import 'package:ticket_booking/utils/app_styles.dart';
 
 void main() {
   runApp(const MyApp());

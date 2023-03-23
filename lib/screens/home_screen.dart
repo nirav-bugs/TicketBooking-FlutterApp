@@ -1,10 +1,11 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:ticket_booking/app_styles.dart';
 import 'package:ticket_booking/screens/hotel_screen.dart';
 
-import '../app_info_list.dart';
+// import '../app_info_list.dart';
+import '../utils/app_info_list.dart';
+import '../utils/app_styles.dart';
 import 'ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
