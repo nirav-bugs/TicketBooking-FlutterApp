@@ -12,7 +12,7 @@ class ThickContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
             width: 2.5,
-            color: isColor == null ? Colors.white : Color(0xFFBACCF)),
+            color: isColor == null ? Colors.white : const Color(0xFFBACCF)),
       ),
     );
   }

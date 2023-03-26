@@ -7,6 +7,7 @@ import 'package:ticket_booking/utils/app_styles.dart';
 import 'package:ticket_booking/widgets/ticket_tabs.dart';
 
 import '../widgets/column_layout.dart';
+import '../widgets/layout_builder.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
@@ -35,12 +36,16 @@ class TicketScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 15),
                 child: TicketView(
                   ticket: ticketList[0],
-                  isColor: true,
+                  isColor: false,
                 ),
+              ),
+              const SizedBox(
+                height: 1,
               ),
               Container(
                 width: size.width * 0.8,
-                padding: const EdgeInsets.only(left: 15, right: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 margin: EdgeInsets.only(
                   right: AppLayout.getHeight(16),
                   left: AppLayout.getHeight(16),
@@ -55,19 +60,132 @@ class TicketScreen extends StatelessWidget {
                           firstText: 'Flutter DB',
                           secondText: 'Passenger',
                           alignment: CrossAxisAlignment.start,
+                          isColor: false,
                         ),
                         AppColumnLayout(
                           firstText: '5221 36489',
                           secondText: 'passport',
+                          isColor: false,
                           alignment: CrossAxisAlignment.end,
                         ),
                       ],
                     ),
+                    Gap(AppLayout.getHeight(20)),
+                    const AppLayoutBuilderWidgets(
+                      section: 15,
+                      isColor: false,
+                      width: 5,
+                    ),
+                    Gap(AppLayout.getHeight(20)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        AppColumnLayout(
+                          firstText: '5646 4564 813258',
+                          secondText: 'Number of E-Ticket',
+                          isColor: false,
+                          alignment: CrossAxisAlignment.start,
+                        ),
+                        AppColumnLayout(
+                          firstText: 'B2SG28',
+                          secondText: 'Booking code',
+                          alignment: CrossAxisAlignment.end,
+                          isColor: false,
+                        ),
+                      ],
+                    ),
+                    Gap(AppLayout.getHeight(20)),
+                    const AppLayoutBuilderWidgets(
+                      section: 15,
+                      isColor: false,
+                      width: 5,
+                    ),
+                    Gap(AppLayout.getHeight(20)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              // mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 15,
+                                  width: 15,
+                                  child: Image.asset("assets/images/img_1.png"),
+                                ),
+                                const Text("*** 2462")
+                              ],
+                            ),
+                            const Gap(5),
+                            Text(
+                              "Payment method",
+                              style: Styles.headlinestyle4,
+                            ),
+                          ],
+                        ),
+                        const AppColumnLayout(
+                          firstText: '\$249.99',
+                          secondText: 'Price',
+                          isColor: false,
+                          alignment: CrossAxisAlignment.end,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 1,
+                    ),
+                    const Gap(5),
                   ],
                 ),
-              )
+              ),
+
+              //  bar code  with dependency
+              Center(
+                child: Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(),
+                  child: Text("I am here for bar code"),
+                ),
+              ),
+
+              Gap(15),
+              Container(
+                padding: const EdgeInsets.only(left: 15),
+                child: TicketView(
+                  ticket: ticketList[0],
+                ),
+              ),
             ],
-          )
+          ),
+          Positioned(
+            left: AppLayout.getHeight(21),
+            top: AppLayout.getHeight(295),
+            child: Container(
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Styles.textcolor, width: 2)),
+              child: CircleAvatar(
+                backgroundColor: Styles.textcolor,
+                maxRadius: 4,
+              ),
+            ),
+          ),
+          Positioned(
+            right: AppLayout.getHeight(22),
+            top: AppLayout.getHeight(295),
+            child: Container(
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Styles.textcolor, width: 2)),
+              child: CircleAvatar(
+                backgroundColor: Styles.textcolor,
+                maxRadius: 4,
+              ),
+            ),
+          ),
         ],
       ),
     );

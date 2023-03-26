@@ -23,12 +23,16 @@ class AppColumnLayout extends StatelessWidget {
       children: [
         Text(
           firstText,
-          style: Styles.headlinestyle4,
+          style: isColor == null
+              ? Styles.headlinestyle3.copyWith(color: Colors.white)
+              : Styles.headlinestyle3,
         ),
         Gap(AppLayout.getHeight(5)),
         Text(
           secondText,
-          style: Styles.headlinestyle4,
+          style: isColor == null
+              ? Styles.headlinestyle4.copyWith(color: Colors.white)
+              : Styles.headlinestyle4,
         ),
       ],
     );
