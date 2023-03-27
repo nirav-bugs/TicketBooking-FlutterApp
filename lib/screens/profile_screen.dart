@@ -23,7 +23,6 @@ class ProfileScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  // padding: const EdgeInsets.all(300),
                   height: AppLayout.getHeight(75),
                   width: AppLayout.getHeight(80),
                   decoration: BoxDecoration(
@@ -36,7 +35,6 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 Gap(AppLayout.getWidth(2)),
                 Container(
-                  // padding: const EdgeInsets.all(30),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,

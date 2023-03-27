@@ -3,7 +3,6 @@ import 'package:gap/gap.dart';
 import 'package:ticket_booking/widgets/ticket_tabs.dart';
 import 'package:ticket_booking/utils/app_layout.dart';
 import 'package:ticket_booking/widgets/icon_app_widget.dart';
-
 import '../utils/app_styles.dart';
 import '../widgets/text_widget.dart';
 

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-
 import 'package:gap/gap.dart';
-
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
 class AppColumnLayout extends StatelessWidget {
   final CrossAxisAlignment alignment;
   final String firstText, secondText;
-  final bool? isColor; //next bakiiiiii
+  final bool? isColor;
   const AppColumnLayout(
       {super.key,
       required this.firstText,

@@ -26,7 +26,6 @@ class _BottomBarState extends State<BottomBar> {
       _selectedindex = index;
     });
   }
-  // const BottomBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,6 @@ class _BottomBarState extends State<BottomBar> {
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.black,
           type: BottomNavigationBarType.fixed,
-          // why bottom??
           elevation: 10,
           items: const [
             BottomNavigationBarItem(
@@ -63,7 +61,6 @@ class _BottomBarState extends State<BottomBar> {
                 activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
                 label: "Profile"),
           ]),
-      // HomeScreen()
     );
   }
 }

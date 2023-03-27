@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-// import 'package:flutter/src/widgets/framework.dart';
-// import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:ticket_booking/utils/app_layout.dart';
-
 import '../utils/app_styles.dart';
 
 class HotelScreen extends StatelessWidget {
@@ -54,7 +51,7 @@ class HotelScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(10)),
           Text(
             "\$${hotel['price']}/Night",
-            // "\$40/Night",
+            // "\$40/Night",  //dollor sign to show in page
             style: Styles.headlinestyle2.copyWith(color: Colors.white),
           ),
         ],

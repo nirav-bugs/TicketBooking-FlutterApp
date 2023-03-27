@@ -199,79 +199,18 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Column(
-                      //   crossAxisAlignment: CrossAxisAlignment.start,
-                      //   children: [
-                      //     Text(
-                      //       ticket['date'],
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle3
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle3,
-                      //     ),
-                      //     Gap(AppLayout.getHeight(5)),
-                      //     Text(
-                      //       "Date",
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle4
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle4,
-                      //     ),
-                      //   ],
-                      // ),
+                      //refer code at end
                       AppColumnLayout(
                         isColor: isColor,
                         firstText: ticket['date'],
                         secondText: "Date",
                         alignment: CrossAxisAlignment.start,
                       ),
-
-                      // Column(
-                      //   crossAxisAlignment: CrossAxisAlignment.center,
-                      //   children: [
-                      //     Text(
-                      //       ticket['departure_time'],
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle3
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle3,
-                      //     ),
-                      //     Gap(AppLayout.getHeight(5)),
-                      //     Text(
-                      //       "Departure time",
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle4
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle4,
-                      //     ),
-                      //   ],
-                      // ),
                       AppColumnLayout(
                           isColor: isColor,
                           firstText: ticket['departure_time'],
                           secondText: "Departure time",
                           alignment: CrossAxisAlignment.center),
-
-                      // Column(
-                      //   crossAxisAlignment: CrossAxisAlignment.end,
-                      //   children: [
-                      //     Text(
-                      //       ticket['number'],
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle3
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle3,
-                      //     ),
-                      //     Gap(AppLayout.getHeight(5)),
-                      //     Text(
-                      //       "Number",
-                      //       style: isColor == null
-                      //           ? Styles.headlinestyle4
-                      //               .copyWith(color: Colors.white)
-                      //           : Styles.headlinestyle4,
-                      //     ),
-                      //   ],
-                      // )
                       AppColumnLayout(
                           isColor: isColor,
                           firstText: ticket['number'],
@@ -288,3 +227,41 @@ class TicketView extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+  // Two method show below use of widget easy code
+
+  // Column(
+  //   crossAxisAlignment: CrossAxisAlignment.start,
+  //   children: [
+  //     Text(
+  //       ticket['date'],
+  //       style: isColor == null
+  //           ? Styles.headlinestyle3
+  //               .copyWith(color: Colors.white)
+  //           : Styles.headlinestyle3,
+  //     ),
+  //     Gap(AppLayout.getHeight(5)),
+  //     Text(
+  //       "Date",
+  //       style: isColor == null
+  //           ? Styles.headlinestyle4
+  //               .copyWith(color: Colors.white)
+  //           : Styles.headlinestyle4,
+  //     ),
+  //   ],
+  // ),
+
+
+
+  // AppColumnLayout(
+  //   isColor: isColor,
+  //   firstText: ticket['date'],
+  //   secondText: "Date",
+  //   alignment: CrossAxisAlignment.start,
+  // ),

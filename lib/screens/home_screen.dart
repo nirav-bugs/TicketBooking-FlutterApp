@@ -2,8 +2,6 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking/screens/hotel_screen.dart';
-
-// import '../app_info_list.dart';
 import '../utils/app_info_list.dart';
 import '../utils/app_styles.dart';
 import '../widgets/text_widget.dart';
@@ -52,11 +50,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const Gap(25),
                 Container(
-                  // height: 50, or below
-
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xFFF4F6FD)),
@@ -80,15 +75,20 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const Gap(25),
-          // const TicketView(),
+          // const TicketView(),//if having one data
+
+          //if you have more items to show in scrollview
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(right: 10),
             child: Row(
+              //below is static items
               // children: const [
               //   TicketView(),
               //   TicketView(),
               // ],
+
+              //listing items from data file
               children: ticketList
                   .map((singleticketdetail) =>
                       TicketView(ticket: singleticketdetail))
