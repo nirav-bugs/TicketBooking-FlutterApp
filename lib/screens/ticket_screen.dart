@@ -5,9 +5,10 @@ import 'package:ticket_booking/utils/app_info_list.dart';
 import 'package:ticket_booking/utils/app_layout.dart';
 import 'package:ticket_booking/utils/app_styles.dart';
 import 'package:ticket_booking/widgets/ticket_tabs.dart';
-
 import '../widgets/column_layout.dart';
 import '../widgets/layout_builder.dart';
+// ignore: depend_on_referenced_packages
+import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatelessWidget {
   const TicketScreen({super.key});
@@ -141,11 +142,31 @@ class TicketScreen extends StatelessWidget {
               ),
 
               //  bar code  with dependency
-              Center(
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(21),
+                        bottomRight: Radius.circular(21))),
+                margin:
+                    EdgeInsets.symmetric(horizontal: AppLayout.getWidth(15)),
+                padding: EdgeInsets.symmetric(vertical: AppLayout.getWidth(15)),
                 child: Container(
-                  padding: const EdgeInsets.all(15),
-                  decoration: const BoxDecoration(),
-                  child: const Text("I am here for bar code"),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getWidth(15),
+                  ),
+                  child: ClipRRect(
+                    borderRadius:
+                        BorderRadius.circular(AppLayout.getHeight(15)),
+                    child: BarcodeWidget(
+                      barcode: Barcode.code128(),
+                      data: 'https://github.com/tech-Nirav',
+                      drawText: false,
+                      color: Styles.textcolor,
+                      width: double.infinity,
+                      height: 75,
+                    ),
+                  ),
                 ),
               ),
 
