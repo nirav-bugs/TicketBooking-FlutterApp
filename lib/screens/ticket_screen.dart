@@ -7,7 +7,6 @@ import 'package:ticket_booking/utils/app_styles.dart';
 import 'package:ticket_booking/widgets/ticket_tabs.dart';
 import '../widgets/column_layout.dart';
 import '../widgets/layout_builder.dart';
-// ignore: depend_on_referenced_packages
 import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatelessWidget {
@@ -108,7 +107,6 @@ class TicketScreen extends StatelessWidget {
                         Column(
                           children: [
                             Row(
-                              // mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 SizedBox(
                                   height: 15,
@@ -143,7 +141,7 @@ class TicketScreen extends StatelessWidget {
 
               //  bar code  with dependency
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(21),
