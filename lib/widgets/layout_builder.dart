@@ -25,7 +25,7 @@ class AppLayoutBuilderWidgets extends StatelessWidget {
               child: DecoratedBox(
                 decoration: BoxDecoration(
                     color:
-                        isColor == null ? Colors.white : Colors.grey.shade300),
+                        isColor == null ? Colors.white : Colors.grey.shade500),
               ),
             ),
           ),

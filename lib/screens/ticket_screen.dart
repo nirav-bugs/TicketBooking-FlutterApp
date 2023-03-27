@@ -143,13 +143,13 @@ class TicketScreen extends StatelessWidget {
               //  bar code  with dependency
               Center(
                 child: Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(),
-                  child: Text("I am here for bar code"),
+                  padding: const EdgeInsets.all(15),
+                  decoration: const BoxDecoration(),
+                  child: const Text("I am here for bar code"),
                 ),
               ),
 
-              Gap(15),
+              const Gap(15),
               Container(
                 padding: const EdgeInsets.only(left: 15),
                 child: TicketView(
@@ -162,7 +162,7 @@ class TicketScreen extends StatelessWidget {
             left: AppLayout.getHeight(21),
             top: AppLayout.getHeight(295),
             child: Container(
-              padding: EdgeInsets.all(2),
+              padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: Styles.textcolor, width: 2)),
@@ -176,7 +176,7 @@ class TicketScreen extends StatelessWidget {
             right: AppLayout.getHeight(22),
             top: AppLayout.getHeight(295),
             child: Container(
-              padding: EdgeInsets.all(2),
+              padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: Styles.textcolor, width: 2)),
